@@ -245,6 +245,11 @@ body {
   cursor: pointer;
 }
 
+.form-container .checkout-button.disable {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
 /* .shopping-cart .remove-item {
   position: absolute;
   right: 1rem;
