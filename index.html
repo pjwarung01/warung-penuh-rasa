@@ -27,6 +27,13 @@
 
     <!-- App -->
     <script src="src/app.js" async></script>
+
+    <!-- Midtrans -->
+    <script
+      type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-6geFdjZaZJNXojY8"
+    ></script>
   </head>
 
   <body>
@@ -92,6 +99,12 @@
 
         <div class="form-container" x-show="$store.cart.items.length">
           <form action="" id="checkoutForm">
+            <input
+              type="hidden"
+              name="items"
+              x-model="JSON.stringify($store.cart.items)"
+            />
+            <input type="hidden" name="total" x-model="$store.cart.total" />
             <h5>Customer Detail</h5>
             <label for="name">
               <span>Name</span>
@@ -125,7 +138,7 @@
     <section class="lorong" id="home">
       <main class="content">
         <h1>Mari Nikmati Sepiring <span>Kuliner</span></h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>Makan enak bukan lagi wacana, yuk rasain serunya di sini!</p>
         <a href="#" class="cta">Order Disi</a>
       </main>
     </section>
@@ -141,16 +154,20 @@
         <div class="content">
           <h3>Kenapa memilih jajan kuliner di warung kami?</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-            quaerat eos eveniet. Dolores, beatae eius! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Placeat error ab exercitationem
-            suscipit rerum esse animi optio non adipisci dolorum!
+            Sejak 2021, Warung Irgy hadir jadi tempat andalan pecinta kuliner
+            yang cari rasa autentik dan suasana hangat. Dari awal berdiri, kami
+            konsisten menyajikan berbagai pilihan makanan lezat, dari resep
+            rumahan sampai kreasi baru yang siap manjain lidah.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-            quaerat eos eveniet. Dolores, beatae eius! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Placeat error ab exercitationem
-            suscipit rerum esse animi optio non adipisci dolorum!
+            Bukan cuma sekadar makan, di Warung Irgy kamu bakal ngerasain
+            pengalaman kuliner yang seru, ramah, dan penuh cita rasa. Berawal
+            dari semangat kecil di 2021, kini Warung Irgy terus berkembang
+            dengan satu tujuan: bikin setiap momen makan kamu makin spesial.
+          </p>
+          <p>
+            Ayo, nikmati cerita rasa kami — karena di Warung Irgy, setiap piring
+            punya cerita.
           </p>
         </div>
       </div>
@@ -161,8 +178,8 @@
     <section id="menu" class="menu">
       <h2>Menu <span>Kuliner</span></h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        suscipit, minima magnam voluptate ullam iure?
+        Temukan berbagai hidangan spesial yang siap memanjakan lidahmu — dari
+        rasa tradisional hingga favorit kekinian!
       </p>
       <div class="row">
         <div class="menu-card">
@@ -193,8 +210,8 @@
     <section id="products" class="products" x-data="products">
       <h2>Produk <span>Unggulan Kami</span></h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        suscipit, minima magnam voluptate ullam iure?
+        Pilih menu, order sekarang, dan siap-siap ketagihan sama rasa spesial
+        dari Warung Irgy!
       </p>
 
       <div class="row">
@@ -304,8 +321,8 @@
     <section id="contact" class="contact">
       <h2>Kontak <span>Warung</span></h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        suscipit, minima magnam voluptate ullam iure?
+        Punya pertanyaan atau mau langsung order? Hubungi Warung Irgy, kami siap
+        melayani kamu!
       </p>
       <div class="row">
         <iframe
